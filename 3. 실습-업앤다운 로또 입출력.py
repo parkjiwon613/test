@@ -180,6 +180,7 @@ def load_ranking():
             }
 
             players.append(player)
+
         for i in range(len(players) - 1):
             for j in range(len(players) - 1 - i):
                 if players[j]["시도횟수"] > players[j + 1]["시도횟수"]:
@@ -190,7 +191,6 @@ def load_ranking():
         for i in range(len(players)):
             print(f"{i + 1}위 : {players[i]['name']} / {players[i]['시도횟수']}회")
            
-
     except FileNotFoundError:
         print("아직 저장된 랭킹이 없습니다.")
 
